@@ -1,0 +1,61 @@
+{
+  "name": "apy-api",
+  "description": "APY calculations for Dynamic Set Dollar",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Gustavo Guimaraes",
+    "email": "gustavoguimaraes@gmail.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^14.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run mocha",
+    "lint": "eslint src/. test/. --config .eslintrc.json --fix",
+    "dev": "npm run env:dev nodemon src/",
+    "env:dev": "dotenv -e .env",
+    "start": "node src/",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": []
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^4.5.11",
+    "@feathersjs/errors": "^4.5.11",
+    "@feathersjs/express": "^4.5.11",
+    "@feathersjs/feathers": "^4.5.11",
+    "@feathersjs/transport-commons": "^4.5.11",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "ethers": "^5.0.26",
+    "helmet": "^4.4.0",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "dotenv-cli": "^4.0.0",
+    "eslint": "^7.18.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.7"
+  }
+}
